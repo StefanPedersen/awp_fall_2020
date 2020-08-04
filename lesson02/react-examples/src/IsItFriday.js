@@ -1,30 +1,17 @@
-import React, {Component} from 'react';
+import React, { useState } from "react";
 
-class IsItFriday extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            friday: (new Date()).getDay() === 5
-        };
-    }
+function IsItFriday(props) {
+  const [friday, setFriday] = useState((new Date()).getDay() === 5);
 
-    render() {
-        let content = <p>It is not friday</p>;
-        if (this.state.friday) {
-            content = <p>It is friday</p>;
-        }
-        /*
-            Alternative:
-            <>
-                {this.state.today ? <p>It is friday.</p> : <p>It is not friday.</p>}
-            </>
-         */
-        return (
-            <div>
-                {content}
-            </div>
-        );
-    }
+  let content = <p>It is not friday</p>;
+  if (friday) {
+    content = <p>It is friday</p>;
+  }
+  return (
+    <div>
+      {content}
+    </div>
+  );
 }
 
 export default IsItFriday;

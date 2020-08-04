@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from "react";
 import ButtonExample from "./ButtonExample";
 import InputTextExample from "./InputTextExample";
 import HelloExample from "./HelloExample";
@@ -7,31 +7,29 @@ import IsItFriday from "./IsItFriday";
 import ListSum from "./ListSum";
 import AddNumber from "./AddNumber";
 
-class App extends Component {
+function App() {
+  return (
+    <>
+      <AddNumber />
 
-    render() {
-        return (
-            <>
-                <AddNumber/>
+      <IsItFriday />
 
-                <IsItFriday></IsItFriday>
+      <HelloExample justAName="fellow programmer" />
+      {" "}
+      {/* just_a_name is a prop */}
 
-                <HelloExample just_a_name="fellow programmer"/> {/* just_a_name is a prop */}
+      <ButtonExample />
 
-                <ButtonExample/>
+      <br />
+      <br />
 
-                <br/><br/>
+      <InputTextExample />
 
-                <InputTextExample/>
+      <NameListExample names={["Kristian", "Jes", "Mads", "Torill"]} />
 
-                <NameListExample names={['Kristian', 'Jes', 'Mads', 'Torill']}/>
-
-                <ListSum numbers={[1,2,3,4]}></ListSum>
-
-
-            </>
-        );
-    }
+      <ListSum numbers={[1, 2, 3, 4]} />
+    </>
+  );
 }
 
 export default App;

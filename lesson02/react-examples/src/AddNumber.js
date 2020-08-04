@@ -1,41 +1,30 @@
-import React, {Component} from 'react';
+import React, { useState, useEffect } from "react";
 
-class AddNumber extends Component {
+function AddNumber() {
+  const [sum, setSum] = useState(0);
+  const [input, setInput] = useState("");
 
-    constructor(props) {
-        super(props);
+  useEffect(() => {
+    console.log("sum effect");
+    
+    // Update the document title using the browser API
+    document.title = `The sum is ${sum}`;
+    return () => {
+      console.log("Sum clean up");
+    };
+  });
 
-        this.state = {
-            sum: 0,
-            input: ""
-        }
-    }
-
-    onClick(event) {
-        let newSum = this.state.sum + parseInt(this.state.input);
-        this.setState({
-            sum: newSum
-        })
-    }
-
-    onChange(event) {
-        this.setState({
-            input: event.target.value
-        })
-    }
-
-    render() {
-        return (
-            <>
-                <h3>Add Number</h3>
-                <input onChange={
-                    (event) => this.onChange(event)} type="text"/>
-                <button onClick={
-                    (event) => this.onClick(event)}>Add Number</button>
-                <p>Sum: {this.state.sum}</p>
-            </>
-        );
-    }
+  return (
+    <>
+      <h3>Add Number</h3>
+      <input onChange={(event) => setInput(event.target.value)} type="text" />
+      <button type="button" onClick={(event) => setSum(sum + parseInt(input, 10))}>Add Number</button>
+      <p>
+        Sum:
+        {sum}
+      </p>
+    </>
+  );
 }
 
 export default AddNumber;

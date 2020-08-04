@@ -1,0 +1,45 @@
+{
+    "env": {
+        "browser": true,
+        "es2020": true,
+        "node": true,
+        "jest": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 11,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        // enable additional rules
+        "indent": ["error", 2],
+        "quotes": ["error", "double"],
+        "semi": ["error", "always"],
+    
+        // override default options for rules from base configurations
+        "no-cond-assign": ["error", "always"],
+        "eol-last": "warn",
+        "object-shorthand": "warn",
+        "no-unused-vars": "warn",
+        "react/jsx-filename-extension": "off",
+        "import/no-unresolved": "warn",
+        "react/prop-types": "off",
+        "no-trailing-spaces": ["error", { "skipBlankLines": true }],
+        "no-restricted-syntax": "off",
+    
+        // disable rules from base configurations
+        "no-console": "off",
+        "linebreak-style": "off",
+        "comma-dangle": "off"
+
+    }
+}

@@ -1,22 +1,19 @@
-import React, {Component} from 'react';
+import React from "react";
 
-class NameListExample extends Component {
-    render() {
-        let list = [];
-        for (let name of this.props.names) {
-            list.push(<li>{name}</li>);
-        }
+function NameListExample(props) {
+  const list = [];
+  for (const name of props.names) {
+    list.push(<li>{name}</li>);
+  }
 
-        return (
-            <>
-                <h3>The names</h3>
-                <ul>
-                    {list}
-                </ul>
-            </>
-        );
-    }
+  return (
+    <>
+      <h3>The names</h3>
+      <ul>
+        {list}
+      </ul>
+    </>
+  );
 }
 
 export default NameListExample;
-
