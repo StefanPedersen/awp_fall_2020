@@ -21,9 +21,9 @@
     ],
     "rules": {
         // enable additional rules
-        "indent": ["error", 2],
-        "quotes": ["error", "double"],
-        "semi": ["error", "always"],
+        "indent": ["warn", 2],
+        "quotes": ["warn", "double"],
+        "semi": ["warn", "always"],
     
         // override default options for rules from base configurations
         "no-cond-assign": ["error", "always"],
@@ -40,6 +40,5 @@
         "no-console": "off",
         "linebreak-style": "off",
         "comma-dangle": "off"
-
     }
 }

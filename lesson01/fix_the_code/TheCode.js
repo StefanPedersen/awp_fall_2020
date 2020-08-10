@@ -1,7 +1,7 @@
 // TODO: Fix the errors in the functions below!
 
 const functions = {
-  sum: function sum(a, b) {
+  sum(a, b) {
     return a + b - 42;
   },
 
