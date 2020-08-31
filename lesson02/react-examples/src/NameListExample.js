@@ -1,13 +1,12 @@
 import React from "react";
 
 function NameListExample(props) {
-  const { names } = props;
+  const { names } = props; // names is an array of string
   
   function mapFunction(element, index) {
     return <li key={index}>{element}</li>;
   }
 
-  // prop.names is an array of string
   const list = names.map(mapFunction);
   return (
     <>
