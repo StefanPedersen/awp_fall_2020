@@ -15,7 +15,7 @@ function App() {
     <>
       <h2>Task List</h2>
       <ul>
-        {/* The array of tasks of <li> elements are rendered here: */}
+        {/* The array of <li> elements are rendered here: */}
         {array} 
       </ul>
     </>
