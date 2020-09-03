@@ -8,15 +8,14 @@ function App() {
     { task: 'Bake cake', done: true }
   ]);
 
-  // How about wrapping each task in a <li></li> and putting it in this array below?
-  // Hint: Use at for loop
+  // How about using a "for loop" and put each task inside <li></li> elements in this array?
   const array = [<li>foo</li>, <li>bar</li>, <li>baz</li>]
 
   return (
     <>
       <h2>Task List</h2>
       <ul>
-        {/* The array of tasks must be rendered below: */}
+        {/* The array of tasks of <li> elements are rendered here: */}
         {array} 
       </ul>
     </>
