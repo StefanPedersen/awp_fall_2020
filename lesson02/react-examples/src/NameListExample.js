@@ -7,6 +7,9 @@ function NameListExample(props) {
     return <li key={index}>{element}</li>;
   }
 
+  // Input: ["Kristian", "Jes", "Mads", "Torill"]
+  // Output: [<li>Kristian</li>, <li>...</li>, <li>...</li>]
+
   const list = names.map(mapFunction);
   return (
     <>

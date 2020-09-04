@@ -9,9 +9,9 @@ function ButtonExample(props) {
       type="button"
       onClick={(event) => {
         setCount(count + 1);
-        setButtonText("This button is clicked");
-      }}
-    >
+        setButtonText("This button is clicked" + count);
+      }}>
+        
       {
         `${buttonText}. Count: ${count}`
       }

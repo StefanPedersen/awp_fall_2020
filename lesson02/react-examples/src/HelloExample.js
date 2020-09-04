@@ -4,9 +4,7 @@ function HelloExample(props) {
   const { justAName } = props;
   return (
     <p>
-      Hello
-      {justAName}
-      .
+      Hello {justAName}.
     </p>
   );
 }
