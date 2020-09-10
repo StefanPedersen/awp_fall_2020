@@ -1,6 +1,8 @@
 import React from 'react';
 import { Router } from "@reach/router";
 
+import "./App.css";
+
 import FruitList from './FruitList';
 import About from './About';
 import Nav from "./Nav";
@@ -8,8 +10,7 @@ import ShowStuff from "./ShowStuff";
 
 function App(props) {
   return (
-    // Every route target (defined in the path attributes below) needs to appear inside a <Router> component
-    <>
+    <div className="background-yellow">
       <Nav /> {/* <Nav> is not a target for routing, so we put it outside of <Router>*/}
       <Router>
         <FruitList path="/"></FruitList>
@@ -19,7 +20,7 @@ function App(props) {
         {/* Browser address bar will show: http://localhost:3000/stuff/some-name */}
         <ShowStuff path="/stuff/:name"></ShowStuff>
       </Router>
-    </>
+    </div>
   );
 }
 
