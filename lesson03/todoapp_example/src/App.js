@@ -9,8 +9,7 @@ function App() {
     { text: 'Bake cake', done: true },
     { text: 'Pick up groceries', done: false },
     { text: 'Post letter', done: false }
-  ]
-  );
+  ]);
 
   function addTask(text) {
     const task = {
@@ -22,7 +21,6 @@ function App() {
 
   function changeDone(index) {
     const newTasks = [...tasks];
-    const taskToChange = newTasks[index];
     newTasks[index] = { ...newTasks[index], done: !(newTasks[index].done) };
     setTasks(newTasks);
   }
