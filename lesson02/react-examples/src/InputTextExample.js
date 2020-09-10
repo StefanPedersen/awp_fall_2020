@@ -6,7 +6,8 @@ function InputTextExample(props) {
   return (
     <>
       <input onChange={(event) => setInput(event.target.value)} type="text" />
-      <p>The contents of <strong>this.state.input</strong>: {input}
+      <p>
+        The contents of <strong>this.state.input</strong>: {input}
       </p>
     </>
   );
