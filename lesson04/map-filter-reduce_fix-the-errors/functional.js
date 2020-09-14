@@ -18,7 +18,7 @@ const functions = {
   },
   
   createHtmlUl(array) {
-    return `<ul>\n${array.map((element) => `<li>${element}</li>\n`).reduce((prev, curr) => prev + curr)}`;
+    return `<ul>\n${array.map((element) => `<li>${element}<li>\n`).reduce((prev, curr) => prev + curr)}`;
   },
 
   createTasksFromStringArray(array) {
