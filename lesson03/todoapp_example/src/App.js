@@ -21,7 +21,7 @@ function App() {
 
   function changeDone(index) {
     const newTasks = [...tasks];
-    newTasks[index] = { ...newTasks[index], done: !(newTasks[index].done) };
+    newTasks[index] = { ...newTasks[index], done: !(newTasks[index].done), };
     setTasks(newTasks);
   }
 

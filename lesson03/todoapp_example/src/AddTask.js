@@ -5,7 +5,11 @@ function AddTask(props) {
   return (
     <>
       <input type="text" placeholder="Write your new task here" size="30"
-        onChange={(event) => setInput(event.target.value)} />
+        onChange={
+          (event) => {
+            setInput(event.target.value)
+          }
+          } />
       <button onClick={(event) => props.addTask(input)}>Add Task</button>
     </>
   );
