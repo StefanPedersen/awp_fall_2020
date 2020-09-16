@@ -20,7 +20,7 @@ function App() {
   }
 
   function changeDone(index) {
-    const newTasks = [...tasks];
+    const newTasks = [...tasks]; // Clone array
     newTasks[index] = { ...newTasks[index], done: !(newTasks[index].done), };
     setTasks(newTasks);
   }
