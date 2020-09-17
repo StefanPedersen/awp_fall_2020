@@ -1,0 +1,17 @@
+[
+    {
+      "id": 0,
+      "title": "Pizza",
+      "description": "Pizza is nice"
+    },
+    {
+      "id": 1,
+      "title": "Baked potatoes with fried eggs",
+      "description": "Served with baked beans"
+    },
+    {
+      "id": 2,
+      "title": "Vegetable quiche",
+      "description": "With grated courgette and cheese"
+    }
+]
