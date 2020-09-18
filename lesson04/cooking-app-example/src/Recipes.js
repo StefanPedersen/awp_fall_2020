@@ -3,6 +3,11 @@ import {Link} from "@reach/router";
 
 function Recipes(props) {
   let recipes = props.recipes;
+  let filter = props.filter;
+
+  if (filter) {
+   recipes = recipes.filter(recipe => recipe.ingredients.includes(filter));
+  }
 
   let mapFunction = element => 
     <Link to={`/recipe/${element.id}`} key={element.id}>
