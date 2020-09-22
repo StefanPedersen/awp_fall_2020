@@ -10,7 +10,7 @@ const functions = {
   },
 
   replaceBadWords(string) {
-    const badWords = ["poop", "pee"];
+    const badWords = ["crap", "poop", "pee"];
     const array = string.split(" ");
     return array
       .map((word) => (badWords.includes(word) ? "cake" : word))

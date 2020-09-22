@@ -3,18 +3,18 @@ import {Link} from "@reach/router";
 
 function Recipes(props) {
   let recipes = props.recipes;
-  let filter = props.filter;
+  const filter = props.filter;
 
   if (filter) {
    recipes = recipes.filter(recipe => recipe.ingredients.includes(filter));
   }
 
-  let mapFunction = element => 
+  const mapFunction = element => 
     <Link to={`/recipe/${element.id}`} key={element.id}>
       <li>{element.title}</li>
     </Link>;
 
-  let list = recipes.map(mapFunction);
+  const list = recipes.map(mapFunction);
 
   return (
     <>
