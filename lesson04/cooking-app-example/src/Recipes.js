@@ -6,7 +6,7 @@ function Recipes(props) {
   const filter = props.filter;
 
   if (filter) {
-   recipes = recipes.filter(recipe => recipe.ingredients.includes(filter));
+    recipes = recipes.filter(recipe => recipe.ingredients.includes(filter));
   }
 
   const mapFunction = element => 
