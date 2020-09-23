@@ -19,7 +19,7 @@ function App() {
       <h1>Cooking App</h1>
       <Router>
           <Recipes path="/" recipes={recipes}/>
-          <Recipes path="/with/:filter" recipes={recipes}/>
+          <Recipes path="/recipes/with/:filter" recipes={recipes}/>
           <Recipe path="/recipe/:id" getRecipe={getRecipe}/>
       </Router>
     </>

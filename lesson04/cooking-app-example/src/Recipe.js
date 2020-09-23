@@ -6,7 +6,7 @@ function Recipe(props) {
   const recipe = props.getRecipe(id);
 
   let list = recipe.ingredients.map(ingredient => 
-    <li><Link to={"/recipes/with/" + ingredient}>{ingredient}</Link></li>
+    <li key={ingredient}><Link to={"/recipes/with/" + ingredient}>{ingredient}</Link></li>
   );
 
   return (

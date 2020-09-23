@@ -5,6 +5,8 @@ function Recipes(props) {
   let recipes = props.recipes;
   const filter = props.filter;
 
+  console.log("filter", filter);
+  
   if (filter) {
    recipes = recipes.filter(recipe => recipe.ingredients.includes(filter));
   }
