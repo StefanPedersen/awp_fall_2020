@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link} from "@reach/router";
 
+import AddRecipe from "./AddRecipe";
+
 function Recipes(props) {
   let recipes = props.recipes;
   const filter = props.filter;
@@ -24,6 +26,8 @@ function Recipes(props) {
       <ul>
         {list}
       </ul>
+
+      <AddRecipe addRecipe={props.addRecipe}></AddRecipe>
     </>
   );
 }
