@@ -35,7 +35,7 @@ const openPaths = [
 // The secret value. Defaults to "the cake is a lie".
 const secret = process.env.SECRET || "the cake is a lie";
 
-// Validate the user using token using checkJwt middleware.
+// Validate the user token using checkJwt middleware.
 app.use(checkJwt({ secret }).unless({ path: openPaths }));
 
 // This middleware checks the result of checkJwt above
