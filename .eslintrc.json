@@ -40,6 +40,7 @@
         "no-console": "off",
         "linebreak-style": "off",
         "comma-dangle": "off",
-        "react/jsx-one-expression-per-line": "off"
+        "react/jsx-one-expression-per-line": "off",
+        "eslint-disable-next-line": false
     }
 }
