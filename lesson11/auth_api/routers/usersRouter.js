@@ -35,7 +35,7 @@ module.exports = secret => {
     res.status(501).json({ msg: "create new user not implemented" });
   });
 
-  router.put('/', (req, res) => {
+  router.patch('/', (req, res) => {
     // TODO: Implement user update (change password, etc).
     res.status(501).json({ msg: "update user not implemented" });
   });
