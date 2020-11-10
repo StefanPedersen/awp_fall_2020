@@ -36,7 +36,7 @@ const openPaths = [
 const secret = process.env.SECRET || "the cake is a lie";
 
 // Validate the user token using checkJwt middleware.
-app.use(checkJwt({ secret, algorithms: ['RS256'] }).unless({ path: openPaths }));
+app.use(checkJwt({ secret, algorithms: ['HS512'] }).unless({ path: openPaths }));
 
 // This middleware checks the result of checkJwt above
 app.use((err, req, res, next) => {
