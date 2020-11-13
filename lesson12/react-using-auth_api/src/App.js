@@ -17,6 +17,9 @@ function App() {
       const data = await response.json();
       setKittens(data);
     }
+    if (!authService.loggedIn) {
+      login("krdo", "123");
+    }
     getData();
   }, [requestCount]);
 
@@ -29,7 +32,6 @@ function App() {
       console.log("Login", e);
     }
   }
-  login("kristian", "123");
 
   let contents = <p>No kittens!</p>;
   if (kittens.length > 0) {
