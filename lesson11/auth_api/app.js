@@ -28,15 +28,15 @@ const openPaths = [
   // Open everything that doesn't begin with "/api"
   /^(?!\/api).*/gim,
 
-  // Open all GET requests on the form "/api/kittens/*" using a regular expression
-  //{ url: /\/api\/kittens\.*/gim, methods: ["GET"] }
+  // Open all GET requests on the form "/api/questions/*" using a regular expression
+  { url: /\/api\/questions\.*/gim, methods: ["GET"] }
 ];
 
 // The secret value. Defaults to "the cake is a lie".
 const secret = process.env.SECRET || "the cake is a lie";
 
 // Validate the user token using checkJwt middleware.
-app.use(checkJwt({ secret }).unless({ path: openPaths }));
+app.use(checkJwt({ secret, algorithms: ['HS512'] }).unless({ path: openPaths }));
 
 // This middleware checks the result of checkJwt above
 app.use((err, req, res, next) => {
