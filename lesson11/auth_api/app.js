@@ -28,8 +28,8 @@ const openPaths = [
   // Open everything that doesn't begin with "/api"
   /^(?!\/api).*/gim,
 
-  // Open all GET requests on the form "/api/kittens/*" using a regular expression
-  //{ url: /\/api\/kittens\.*/gim, methods: ["GET"] }
+  // Open all GET requests on the form "/api/questions/*" using a regular expression
+  { url: /\/api\/questions\.*/gim, methods: ["GET"] }
 ];
 
 // The secret value. Defaults to "the cake is a lie".

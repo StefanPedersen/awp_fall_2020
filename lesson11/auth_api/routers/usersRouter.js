@@ -41,6 +41,7 @@ module.exports = secret => {
   });
 
   // This route takes a username and a password and creates an auth token
+  // POST /api/users/authenticate
   router.post('/authenticate', (req, res) => {
     const username = req.body.username;
     const password = req.body.password;
