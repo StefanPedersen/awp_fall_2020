@@ -1,21 +1,24 @@
-import { setState, setEffect } from 'react';
+import { useState } from 'react';
 
 function Login(props) {
+
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  function handleLogin() {
+    props.login(username, password);
+  }
   
-  return <i>Login not implemented</i>
-  
-  /*
   return (
     <>
       <h3>Login</h3>
-      <input onChange={event => this.handleChange(event)}
+      <input onChange={(event) => setUsername(event.target.value)}
         name="username" type="text" placeholder="username"></input><br />
-      <input onChange={event => this.handleChange(event)}
+      <input onChange={(event) => setPassword(event.target.value)}
         name="password" type="password" placeholder="password"></input><br />
       <button onClick={handleLogin}>Login</button>
     </>
   );
-  */
 }
 
 export default Login;

@@ -17,9 +17,6 @@ function App() {
       const data = await response.json();
       setKittens(data);
     }
-    if (!authService.loggedIn) {
-      login("krdo", "123");
-    }
     getData();
   }, [requestCount]);
 
@@ -45,7 +42,7 @@ function App() {
     <>
       <h1>Kittens</h1>
       {contents}
-      <Login login={(username, password) => login(username, password)} />
+      <Login login={login} />
       {authService.loggedIn() ? <pre>User is logged in</pre> : <pre>User is not logged in</pre>}
     </>
   );
