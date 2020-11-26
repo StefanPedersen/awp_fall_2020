@@ -1,0 +1,8 @@
+{
+  "name": "bank-app",
+  "version": "1.0.0",
+  "dependencies": {
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0"
+  }
+}
