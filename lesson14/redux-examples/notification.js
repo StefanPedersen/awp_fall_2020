@@ -28,29 +28,8 @@ let reducer = function (state = [], action) {
 // Creating the store
 const store = createStore(reducer, applyMiddleware(logger, thunk));
 
-// Step 1: Create action creator functions
-// Step 2: Create async action creator function (that relies on thunk)
-
-function showAndHide(text, id) {
-  function action(dispatch) {
-    dispatch(show(text, id));
-    setTimeout(_ => dispatch(hide(42)), 5000);
-  }
-  return action;
-}
-
-function show(text, id) {
-  return {type: "SHOW", text: text, id: id};
-}
-
-function hide(id) {
-  return {type: "HIDE", id: id};
-}
-
 // Let's dispatch an action
-//store.dispatch({ type: "SHOW", text: "Hello there", id: 42 });
-//store.dispatch({ type: "SHOW", text: "Hey you", id: 43 });
-//store.dispatch({ type: "SHOW", text: "Hi", id: 44 });
-//store.dispatch({ type: "HIDE", id: 42 });
-
-store.dispatch(showAndHide("hejsa 123", 45));
+store.dispatch({ type: "SHOW", text: "Hello there", id: 42 });
+store.dispatch({ type: "SHOW", text: "Hey you", id: 43 });
+store.dispatch({ type: "SHOW", text: "Hi", id: 44 });
+store.dispatch({ type: "HIDE", id: 42 });
