@@ -1,14 +1,14 @@
 function reducer(state = [], action) {
   switch (action.type) {
     case 'ASK_QUESTION':
-      return [{
-        id: state.reduce((prev, curr) => curr.id > prev ? curr.id : prev, 0) + 0,
-        text: action.type,
+      return [...state, {
+        id: state.reduce((prev, curr) => curr.id > prev ? curr.id : prev, 0) + 1,
+        text: action.text,
         answers: []
       }];
     case 'ADD_ANSWER':
       return state.map(q => q.id === action.id ?
-        { ...q, answers: [...q.answers, { text: action.answer, votes: 1 }] } : q);
+        { ...q, answers: [...q.answers, { text: action.answer, votes: 0 }] } : q);
     case 'UPVOTE_ANSWER':
       return state.map(q => q.id === action.id ? {
         ...q, answers:

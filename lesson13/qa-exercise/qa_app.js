@@ -8,3 +8,5 @@ store.subscribe(() => {
 });
 
 // TODO: dispatch some actions to demonstrate that this app works!
+
+dispatch({ type: "ASK_QUESTION", text: "Her er et spørgsmål"});
